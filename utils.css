@@ -1,0 +1,41 @@
+.text-center{
+    
+    text-align: center;
+    background-color:#ff987b;
+    color:white;
+    padding:1px;
+    
+    
+   
+    
+}
+.bg-red{
+   
+  background-color: #ff987b; /* Light gray or any color you like */
+  padding: 20px;
+  border-radius: 10px;
+  width: fit-content;
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+       
+}
+
+.mx-auto{
+    
+    margin: auto;
+    
+}
+
+
+.flex{
+    display:flex;
+}
+.flex-col{
+    flex-direction:column;
+}
+
+.items-center{
+   align-items: center;
+   justify-content: center;
+}
+
