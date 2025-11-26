@@ -1,8 +1,41 @@
+let string = "";
+let memory = 0; // memory storage
+let buttons = document.querySelectorAll('.button');
 
-  let string = "";
-  let buttons = document.querySelectorAll('.button');
-  Array.from(buttons).forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      console.log(e.target);
-    });
+Array.from(buttons).forEach(function(btn) {
+  btn.addEventListener('click', function(e) {
+    let value = e.target.innerHTML;
+
+    if (value == '=') {
+      string = eval(string);
+      document.querySelector('input').value = string;
+    }
+    else if (value == 'C') {
+      string = "";
+      document.querySelector('input').value = string;
+    }
+    else if (value == 'X') {
+      string = string + '*'; // convert X to *
+      document.querySelector('input').value = string;
+    }
+    else if (value == 'M+') {
+      // Add current value to memory
+      memory += Number(string);
+      document.querySelector('input').value = "Memory: " + memory;
+    }
+    else if (value == 'M-') {
+      // Subtract current value from memory
+      memory -= Number(string);
+      document.querySelector('input').value = "Memory: " + memory;
+    }
+    else if (value == '√') {
+      // Square root of current value
+      string = Math.sqrt(Number(string));
+      document.querySelector('input').value = string;
+    }
+    else {
+      string = string + value;
+      document.querySelector('input').value = string;
+    }
   });
+});
