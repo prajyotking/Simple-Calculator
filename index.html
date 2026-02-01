@@ -6,13 +6,19 @@
     <title>CalculatorP</title>
     <link href ="style.css" rel="stylesheet" type ="text/css"/>
     <link href ="utils.css" rel="stylesheet" type ="text/css"/>
+    <style>       
+      @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+     </style>
+    
     
 
 </head>
 <body>
-   
-    
-    <div class="container flex flex-col items-center bg-red mx-auto m-w-20">
+   <div>
+    <div class="Uppertext">
+        Simple Calculator✏️
+    </div>
+        <div class="container flex flex-col items-center bg-red mx-auto m-w-20">
         <div class="row">
             <input class="input" type="text" placeholder="0" />
         </div>
@@ -40,13 +46,14 @@
             <button class="button">3</button>
             <button class="button" id="operator">+</button>
         </div>
-           <div class="row">
+           <div class="row last">
             <button class="button zero">0</button>
             <button class="button" id="operator">.</button>
             <button class="button" id="equals">=</button>
             
         </div>
     </div>
+   </div>
   <script src="script.js"></script>  
 </body>
 </html>

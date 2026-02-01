@@ -3,23 +3,23 @@
 html, body{
     height: 100%;
     width:100%;
-    font-family:'Momo';
+    font-family: "Google Sans", sans-serif;
     display:flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg, #0a0a0a, #3a4452);
+background-image: radial-gradient( circle farthest-corner at 9.8% 19.4%,  rgba(223,75,75,1) 11.6%, rgba(20,12,12,1) 90.5% );
+ 
 }
 
 .button{
     padding:20px;
     margin: 0 3px;
-    background-color: transparent;
+    background-color: gray;
     border: 1px solid #717377;
-    box-shadow:-8px -8px 15px rgba(113,115,199,0.5);
     border-radius: 40px;
     cursor: pointer;   
     color: aliceblue;
-    width: 61px;
+    width: 100px;
     font-size: large;
           
    
@@ -32,24 +32,27 @@ html, body{
 
 }
 
-.row{
+.row{ 
+    display: flex;
     margin:8px 2px;
+    gap: 15px;
 }
 .row input{
-    color: aliceblue;
+    width: 500px;
+    color: black;
     font-family: Momo;
     font-size: 19px;
     text-align: right;
     font-weight: bolder;
     padding: 10px 19px;
-    border: 5px solid rgb(172, 158, 177);
+    border: 5px solid rgba(175, 210, 85, 0);
     border-radius: 12px;
-    background-color: transparent;
+    background-color: white;
 }
 
 #operator{
     font-weight: bold;
-    color: rgb(0 255 30);
+    color: rgb(255, 251, 0);
     font-size: larger;
 }
 
@@ -59,9 +62,10 @@ html, body{
     color:black
 }
 
-.row input::placeholder{
-    color:white;
+.button:active{
+    transform: scale(0.95px);
 }
+
 
 
 
