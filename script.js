@@ -7,8 +7,18 @@ Array.from(buttons).forEach(function(btn) {
     let value = e.target.innerHTML;
 
     if (value == '=') {
-      string = eval(string);
-      document.querySelector('input').value = string;
+      try {
+        string = eval(string);
+        if (!isFinite(string)) {
+          document.querySelector('input').value = "cannot divide by zero";
+          string = "";
+        } else {
+          document.querySelector('input').value = string;
+        }
+      } catch (error) {
+        document.querySelector('input').value = "Error";
+        string = "";
+      }
     }
     else if (value == 'C') {
       string = "";
@@ -16,6 +26,10 @@ Array.from(buttons).forEach(function(btn) {
     }
     else if (value == 'X') {
       string = string + '*'; // convert X to *
+      document.querySelector('input').value = string;
+    }
+    else if (value == '/') {
+      string = string + '/';
       document.querySelector('input').value = string;
     }
     else if (value == 'M+') {
